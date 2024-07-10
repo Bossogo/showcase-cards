@@ -1,0 +1,54 @@
+.card-top img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+}
+
+p.about {
+  color: #232323;
+  font-size: 14px;
+  font-weight: 300;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+p.catergory-data {
+  color: #232323;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btn-link {
+  display: none;
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.hover {
+  display: inline-block;
+  opacity: 0;
+  transition: max-height 0.3s ease-in;
+  height: 0;
+  overflow: hidden;
+  max-height: 0px;
+}
+
+.card-body:hover .hover,
+.card-top:hover + .card-body .hover {
+  opacity: 1;
+  height: auto;
+  max-height: 30px;
+}
+
+.card-title {
+  margin-top: 1rem;
+  transition: all 0.2s ease-in;
+}
+
+.card:hover .btn-link,
+.card:hover .card-title {
+  margin-top: 0.5rem;
+}/*# sourceMappingURL=styles.module.css.map */

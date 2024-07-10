@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card-image img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    transition: transform 0.3s;
+    z-index: 1;
+}
+
+.card-content h2, .card-content p {
+    margin: 0;
+}
+
+.hidden-text {
+    position: absolute;
+    bottom: -100%; /* Start off-screen */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    transition: bottom 0.3s;
+    z-index: 0;
+}
+
+.card:hover .hidden-text {
+    bottom: 0; /* Move into view */
+}
+
+.card:hover .card-content {
+    transform: translateY(-100%); /* Adjust the value to fit the hidden text */
+}
